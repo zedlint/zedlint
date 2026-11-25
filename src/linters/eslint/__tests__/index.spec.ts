@@ -153,7 +153,7 @@ describe('lintFiles', () => {
     })
   })
 
-  test.each([
+  it.each([
     ['loadESLint', mockLoadESLint],
     ['lintFiles', mockESLintFiles],
     ['outputFixes', mockOutputFixes],

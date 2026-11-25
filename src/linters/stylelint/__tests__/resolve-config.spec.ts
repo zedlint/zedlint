@@ -19,7 +19,7 @@ describe('resolveConfigFile', () => {
 
     expect(stylelint.resolveConfig).toHaveBeenCalledOnceWith('style.css')
     expect(colourLog.configDebug).toHaveBeenCalledOnceWith('Using custom Stylelint config:', customConfig)
-    expect(config).toStrictEqual(undefined)
+    expect(config).toBeUndefined()
   })
 
   it('returns the path to the default config when no file is provided', async () => {

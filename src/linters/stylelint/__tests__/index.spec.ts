@@ -145,7 +145,7 @@ describe('lintFiles', () => {
     })
   })
 
-  test.each([
+  it.each([
     ['resolveConfigFile', mockResolveConfigFile],
     ['lint', mockLint],
   ])('exits the process when `%s` throws an error', async (_name, mock) => {

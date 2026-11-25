@@ -153,7 +153,7 @@ describe('getFilePatterns', () => {
     expect(console.log).toHaveBeenCalledOnceWith()
   })
 
-  test.each([
+  it.each([
     Linter.ESLint,
     Linter.Markdownlint,
     Linter.Stylelint,

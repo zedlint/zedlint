@@ -39,7 +39,7 @@ describe('loadConfig', () => {
     expect(config).toStrictEqual(expect.objectContaining(defaultConfig))
   })
 
-  test.each([
+  it.each([
     ['fs.existsSync', fs.existsSync],
     ['readConfig', readConfig],
   ])('exits the process when `%s` throws an error', async (_name, mock) => {

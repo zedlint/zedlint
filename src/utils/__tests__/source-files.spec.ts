@@ -30,7 +30,7 @@ describe('sourceFiles', () => {
     expect(files).toStrictEqual([])
   })
 
-  test.each([
+  it.each([
     [Linter.ESLint, ['**/*.ts']],
     [Linter.Markdownlint, ['**/*.md']],
     [Linter.Stylelint, ['**/*.css']],

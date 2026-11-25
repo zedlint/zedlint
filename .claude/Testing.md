@@ -33,7 +33,7 @@ describe('utils', () => {
 
 Name test cases by what the code does, not what it "should" do — e.g. `it('returns null when the input is empty')`, not `it('should return null when...')`, since "should" implies uncertainty about whether it actually does.
 
-Prefer `describe.each`/`test.each` over near-duplicate test blocks when cases differ only in input/output.
+Prefer `describe.each`/`it.each` over near-duplicate test blocks when cases differ only in input/output.
 
 ## Order
 

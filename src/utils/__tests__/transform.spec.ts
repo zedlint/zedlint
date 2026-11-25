@@ -6,7 +6,7 @@ describe('pluralise', () => {
     expect(pluralise('apple', 1)).toBe('apple')
   })
 
-  test.each([0, 2])('returns the pluralised word when count is %i', count => {
+  it.each([0, 2])('returns the pluralised word when count is %i', count => {
     expect(pluralise('apple', count)).toBe('apples')
   })
 
