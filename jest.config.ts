@@ -25,6 +25,7 @@ const config: Config = {
     '<rootDir>/jest-config/setup.ts',
   ],
   testEnvironment: 'node',
+  testMatch: ['**/*.spec.ts'],
   transform: {
     '^.+\\.(j|t)s$': ['ts-jest', {
       astTransformers: {

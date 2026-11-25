@@ -1,6 +1,5 @@
 {
   "ignoreDependencies": [
-    "@jest/globals",
     "@stylistic/stylelint-plugin",
     "@types/eslint",
     "stylelint-config-property-sort-order-smacss",
