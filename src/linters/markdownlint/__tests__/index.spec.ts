@@ -39,7 +39,7 @@ describe('lintFiles', () => {
     expect(mockLint).toHaveBeenCalledOnceWith(commonMarkdownlintOptions)
   })
 
-  test.each([
+  it.each([
     ['no results are found', {}],
     ['no errors are found', { 'README.md': [] }],
     ['no errors are fixable', { 'README.md': [markdownlintError] }],
@@ -127,7 +127,7 @@ describe('lintFiles', () => {
     })
   })
 
-  test.each([
+  it.each([
     ['loadConfig', mockLoadConfig],
     ['lint', mockLint],
   ])('exits the process when `%s` throws an error', async (_name, mock) => {

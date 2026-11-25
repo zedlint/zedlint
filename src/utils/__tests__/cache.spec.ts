@@ -31,7 +31,7 @@ describe('clearCacheDirectory', () => {
     expect(colourLog.info).toHaveBeenCalledOnceWith('Cache cleared.\n')
   })
 
-  test.each(testCases)('clears the cache directory for %s if it exists', (linter, expectedSubDirectory) => {
+  it.each(testCases)('clears the cache directory for %s if it exists', (linter, expectedSubDirectory) => {
     const expectedCacheDirectory = path.join(cacheDirectory, expectedSubDirectory)
 
     jest.mocked(fs.existsSync).mockReturnValueOnce(true)
@@ -56,7 +56,7 @@ describe('clearCacheDirectory', () => {
     expect(colourLog.info).toHaveBeenCalledOnceWith('No cache to clear.\n')
   })
 
-  test.each(testCases)('does not attempt to clear the cache for %s if the directory does not exist', (linter, expectedSubDirectory) => {
+  it.each(testCases)('does not attempt to clear the cache for %s if the directory does not exist', (linter, expectedSubDirectory) => {
     const expectedCacheDirectory = path.join(cacheDirectory, expectedSubDirectory)
 
     jest.mocked(fs.existsSync).mockReturnValueOnce(false)
@@ -84,7 +84,7 @@ describe('clearCacheDirectory', () => {
     expect(colourLog.error).toHaveBeenCalledOnceWith('Failed to clear cache.\n', expect.any(Error))
   })
 
-  test.each(testCases)('logs an error if clearing the cache fails for %s', (linter, expectedSubDirectory) => {
+  it.each(testCases)('logs an error if clearing the cache fails for %s', (linter, expectedSubDirectory) => {
     const expectedCacheDirectory = path.join(cacheDirectory, expectedSubDirectory)
 
     jest.mocked(fs.existsSync).mockReturnValueOnce(true)
@@ -106,7 +106,7 @@ describe('clearCacheDirectory', () => {
 
 describe('getCacheDirectory', () => {
 
-  test.each(testCases)('returns the resolved path to the %s cache directory', (linter, expectedSubDirectory) => {
+  it.each(testCases)('returns the resolved path to the %s cache directory', (linter, expectedSubDirectory) => {
     jest.spyOn(path, 'resolve')
 
     const expectedCacheDirectory = path.join(cacheDirectory, expectedSubDirectory)

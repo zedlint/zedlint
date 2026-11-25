@@ -80,7 +80,7 @@ describe('watchFiles', () => {
     })
   })
 
-  test.each([
+  it.each([
     [Linter.ESLint, '**/*.ts'],
     [Linter.Markdownlint, '**/*.md'],
     [Linter.Stylelint, '**/*.css'],

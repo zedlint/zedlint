@@ -1,6 +1,6 @@
 // https://github.com/eslint-community/eslint-plugin-n
 
-export default {
+const NRules = {
   'n/callback-return': 2,
   'n/exports-style': 0,
   'n/file-extension-in-import': 0,
@@ -39,4 +39,8 @@ export default {
   'n/prefer-promises/dns': 2,
   'n/prefer-promises/fs': 2,
   'n/process-exit-as-throw': 0,
+}
+
+export {
+  NRules,
 }

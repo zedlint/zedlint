@@ -1,5 +1,14 @@
 import { FILE_PATHS } from './eslint/constants'
-import Rules from './eslint/rules'
+import {
+  ESLintCommentsRules,
+  InclusiveLanguageRules,
+  JestRules,
+  JestTypescriptRules,
+  NRules,
+  PromiseRules,
+  SortDestructureKeysRules,
+  SortExportsRules,
+} from './eslint/rules'
 
 export default {
   env: {
@@ -14,12 +23,12 @@ export default {
     'sort-exports',
   ],
   rules: {
-    ...Rules.ESLintComments,
-    ...Rules.InclusiveLanguage,
-    ...Rules.N,
-    ...Rules.Promise,
-    ...Rules.SortDestructureKeys,
-    ...Rules.SortExports,
+    ...ESLintCommentsRules,
+    ...InclusiveLanguageRules,
+    ...NRules,
+    ...PromiseRules,
+    ...SortDestructureKeysRules,
+    ...SortExportsRules,
   },
   overrides: [{
     files: FILE_PATHS.TESTS,
@@ -27,7 +36,7 @@ export default {
       'jest',
     ],
     rules: {
-      ...Rules.Jest,
+      ...JestRules,
     },
   }, {
     files: FILE_PATHS.TESTS_TYPESCRIPT,
@@ -35,7 +44,7 @@ export default {
       'jest',
     ],
     rules: {
-      ...Rules.JestTypescript,
+      ...JestTypescriptRules,
     },
   }],
 }

@@ -1,6 +1,6 @@
 // https://github.com/stylelint-stylistic/stylelint-stylistic
 
-export default {
+const StylisticRules = {
   '@stylistic/at-rule-name-case': 'lower',
   '@stylistic/at-rule-name-newline-after': 'always-multi-line',
   '@stylistic/at-rule-name-space-after': 'always-single-line',
@@ -85,4 +85,8 @@ export default {
   '@stylistic/value-list-comma-space-after': 'always-single-line',
   '@stylistic/value-list-comma-space-before': 'never',
   '@stylistic/value-list-max-empty-lines': 0,
+}
+
+export {
+  StylisticRules,
 }

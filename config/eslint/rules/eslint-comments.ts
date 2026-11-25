@@ -15,7 +15,11 @@ const stylisticIssues = {
   'eslint-comments/require-description': 0,
 }
 
-export default {
+const ESLintCommentsRules = {
   ...bestPractices,
   ...stylisticIssues,
+}
+
+export {
+  ESLintCommentsRules,
 }

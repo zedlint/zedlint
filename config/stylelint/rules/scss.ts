@@ -2,7 +2,7 @@
 
 import { REGEX_PATTERNS } from '../constants'
 
-export default {
+const ScssRules = {
   'scss/at-each-key-value-single-line': true,
   'scss/at-else-closing-brace-newline-after': 'always-last-in-chain',
   'scss/at-else-closing-brace-space-after': 'always-intermediate',
@@ -99,4 +99,8 @@ export default {
   // 'scss/selector-nest-combinators': 'always',
   'scss/selector-no-redundant-nesting-selector': true,
   // 'scss/selector-no-union-class-name': false,
+}
+
+export {
+  ScssRules,
 }

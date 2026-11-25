@@ -251,7 +251,7 @@ const whitespaceInside = {
  * Export
  */
 
-export default {
+const StylelintRules = {
   // Avoid Errors
   ...descending,
   ...duplicate,
@@ -273,4 +273,8 @@ export default {
   ...quotes,
   ...redundant,
   ...whitespaceInside,
+}
+
+export {
+  StylelintRules,
 }

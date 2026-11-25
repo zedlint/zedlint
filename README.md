@@ -2,7 +2,7 @@
 
 [![Test](https://github.com/zedlint/zedlint/actions/workflows/test.yml/badge.svg)](https://github.com/zedlint/zedlint/actions/workflows/test.yml)
 
-![Node Versions Supported](https://img.shields.io/static/v1?label=node&message=>=18.18.0&color=blue)
+![Node Versions Supported](https://img.shields.io/node/v/zedlint?color=blue)
 
 An opinionated linting orchestrator for ESLint, Stylelint, and Markdownlint.
 

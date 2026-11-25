@@ -1,21 +1,19 @@
 // @ts-nocheck
 
-import EslintComments from 'eslint-plugin-eslint-comments'
-import InclusiveLanguage from 'eslint-plugin-inclusive-language'
-import Jest from 'eslint-plugin-jest'
-import N from 'eslint-plugin-n'
-import Promise from 'eslint-plugin-promise'
-import SortDestructureKeys from 'eslint-plugin-sort-destructure-keys'
-import SortExports from 'eslint-plugin-sort-exports'
+import ESLintCommentsPlugin from 'eslint-plugin-eslint-comments'
+import InclusiveLanguagePlugin from 'eslint-plugin-inclusive-language'
+import JestPlugin from 'eslint-plugin-jest'
+import NPlugin from 'eslint-plugin-n'
+import PromisePlugin from 'eslint-plugin-promise'
+import SortDestructureKeysPlugin from 'eslint-plugin-sort-destructure-keys'
+import SortExportsPlugin from 'eslint-plugin-sort-exports'
 
-const Plugins = {
-  EslintComments,
-  InclusiveLanguage,
-  Jest,
-  N,
-  Promise,
-  SortDestructureKeys,
-  SortExports,
+export {
+  ESLintCommentsPlugin,
+  InclusiveLanguagePlugin,
+  JestPlugin,
+  NPlugin,
+  PromisePlugin,
+  SortDestructureKeysPlugin,
+  SortExportsPlugin,
 }
-
-export default Plugins
