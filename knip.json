@@ -1,7 +1,11 @@
 {
+  "entry": [
+    "config/all-legacy.ts",
+    "config/all.ts",
+    "config/stylelint.config.ts"
+  ],
   "ignoreDependencies": [
     "@stylistic/stylelint-plugin",
-    "@types/eslint",
     "stylelint-config-property-sort-order-smacss",
     "stylelint-declaration-strict-value",
     "stylelint-order",
@@ -11,10 +15,5 @@
   ],
   "ignoreUnresolved": [
     "./stylelint.config"
-  ],
-  "entry": [
-    "config/all-legacy.ts",
-    "config/all.ts",
-    "config/stylelint.config.ts"
   ]
 }
