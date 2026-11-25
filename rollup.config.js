@@ -16,6 +16,14 @@ const COPY_FILES = [
 
 const OUTPUT_DIR = 'lib'
 
+const commonTypeScriptOptions = {
+  exclude: [
+    'tests/**',
+    '**/__tests__/**',
+    '**/*.spec.*',
+  ],
+}
+
 const isExternal = id => [
   ...Object.keys(dependencies || {}),
   ...Object.keys(peerDependencies || {}),
@@ -31,7 +39,7 @@ const createConfig = (configFile, format) => ({
   },
   plugins: [
     nodeResolve(),
-    typescript(),
+    typescript(commonTypeScriptOptions),
   ],
 })
 
@@ -47,7 +55,7 @@ export default defineConfig([{
     nodeResolve({
       preferBuiltins: true,
     }),
-    typescript(),
+    typescript(commonTypeScriptOptions),
     terser(),
     copy({
       targets: COPY_FILES.map(file => ({
