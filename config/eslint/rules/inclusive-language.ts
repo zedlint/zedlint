@@ -1,7 +1,11 @@
 // https://github.com/muenzpraeger/eslint-plugin-inclusive-language
 
-export default {
+const InclusiveLanguageRules = {
   'inclusive-language/use-inclusive-words': [2, {
     lintStrings: true,
   }],
+}
+
+export {
+  InclusiveLanguageRules,
 }

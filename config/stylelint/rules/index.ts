@@ -1,15 +1,5 @@
-import DeclarationStrictValue from './declaration-strict-value'
-import Order from './order'
-import Scss from './scss'
-import Stylelint from './stylelint'
-import Stylistic from './stylistic'
-
-const Rules = {
-  DeclarationStrictValue,
-  Order,
-  Scss,
-  Stylelint,
-  Stylistic,
-}
-
-export default Rules
+export * from './declaration-strict-value'
+export * from './order'
+export * from './scss'
+export * from './stylelint'
+export * from './stylistic'

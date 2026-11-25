@@ -1,7 +1,13 @@
 import postcssLess from 'postcss-less'
 import postcssScss from 'postcss-scss'
 
-import Rules from './stylelint/rules'
+import {
+  DeclarationStrictValueRules,
+  OrderRules,
+  ScssRules,
+  StylelintRules,
+  StylisticRules,
+} from './stylelint/rules'
 
 import type { Config } from 'stylelint'
 
@@ -23,7 +29,7 @@ export default {
         ignoreAtRules: ['use', 'forward'],
       }],
       'property-no-unknown': null, // scss/property-no-unknown
-      ...Rules.Scss,
+      ...ScssRules,
     },
     plugins: [
       'stylelint-scss',
@@ -46,9 +52,9 @@ export default {
     'stylelint-order',
   ],
   rules: {
-    ...Rules.DeclarationStrictValue,
-    ...Rules.Order,
-    ...Rules.Stylelint,
-    ...Rules.Stylistic,
+    ...DeclarationStrictValueRules,
+    ...OrderRules,
+    ...StylelintRules,
+    ...StylisticRules,
   },
 } satisfies Config

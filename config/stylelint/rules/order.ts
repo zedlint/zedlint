@@ -1,6 +1,6 @@
 // https://github.com/hudochenkov/stylelint-order
 
-export default {
+const OrderRules = {
   'order/order': [
     'custom-properties',
     'dollar-variables',
@@ -25,4 +25,8 @@ export default {
       type: 'at-rule',
     },
   ],
+}
+
+export {
+  OrderRules,
 }

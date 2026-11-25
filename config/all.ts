@@ -1,23 +1,40 @@
 import { FILE_PATHS } from './eslint/constants'
-import Plugins from './eslint/plugins'
-import Rules from './eslint/rules'
+import {
+  ESLintCommentsPlugin,
+  InclusiveLanguagePlugin,
+  JestPlugin,
+  NPlugin,
+  PromisePlugin,
+  SortDestructureKeysPlugin,
+  SortExportsPlugin,
+} from './eslint/plugins'
+import {
+  ESLintCommentsRules,
+  InclusiveLanguageRules,
+  JestRules,
+  JestTypescriptRules,
+  NRules,
+  PromiseRules,
+  SortDestructureKeysRules,
+  SortExportsRules,
+} from './eslint/rules'
 
 export default [{
   plugins: {
-    'eslint-comments': Plugins.EslintComments,
-    'inclusive-language': Plugins.InclusiveLanguage,
-    'n': Plugins.N,
-    'promise': Plugins.Promise,
-    'sort-destructure-keys': Plugins.SortDestructureKeys,
-    'sort-exports': Plugins.SortExports,
+    'eslint-comments': ESLintCommentsPlugin,
+    'inclusive-language': InclusiveLanguagePlugin,
+    'n': NPlugin,
+    'promise': PromisePlugin,
+    'sort-destructure-keys': SortDestructureKeysPlugin,
+    'sort-exports': SortExportsPlugin,
   },
   rules: {
-    ...Rules.ESLintComments,
-    ...Rules.InclusiveLanguage,
-    ...Rules.N,
-    ...Rules.Promise,
-    ...Rules.SortDestructureKeys,
-    ...Rules.SortExports,
+    ...ESLintCommentsRules,
+    ...InclusiveLanguageRules,
+    ...NRules,
+    ...PromiseRules,
+    ...SortDestructureKeysRules,
+    ...SortExportsRules,
   },
 }, {
   files: FILE_PATHS.TESTS,
@@ -27,10 +44,10 @@ export default [{
     },
   },
   plugins: {
-    'jest': Plugins.Jest,
+    'jest': JestPlugin,
   },
   rules: {
-    ...Rules.Jest,
+    ...JestRules,
   },
 }, {
   files: FILE_PATHS.TESTS_TYPESCRIPT,
@@ -40,9 +57,9 @@ export default [{
     },
   },
   plugins: {
-    'jest': Plugins.Jest,
+    'jest': JestPlugin,
   },
   rules: {
-    ...Rules.JestTypescript,
+    ...JestTypescriptRules,
   },
 }]

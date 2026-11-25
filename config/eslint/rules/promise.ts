@@ -1,6 +1,6 @@
 // https://github.com/eslint-community/eslint-plugin-promise
 
-export default {
+const PromiseRules = {
   'promise/always-return': 2,
   'promise/avoid-new': 0,
   'promise/catch-or-return': 2,
@@ -20,4 +20,8 @@ export default {
   'promise/prefer-await-to-then': 2,
   'promise/spec-only': 2,
   'promise/valid-params': 2,
+}
+
+export {
+  PromiseRules,
 }
